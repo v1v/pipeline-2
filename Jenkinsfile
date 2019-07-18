@@ -6,5 +6,6 @@ properties([
 node {
    stage('Build') {
      sh ' env | sort'
+       pullRequest.addLabel('Build Failed')
    }
 }
